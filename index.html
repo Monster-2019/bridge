@@ -27,17 +27,55 @@
     <header></header>
     <button class="btn">分享测试</button>
     <script>
+    // // 菜单类型(0:分享到微信, 1:分享到朋友圈, 2:保存图片, 3:复制链接, 4:复制内容)
+    // KMJSBridgePopMenuType type = 1;
+    // // 如果是分享，分享类型(0:默认，1:图片，2:音频，3:视频，4:小程序)
+    // KMJSBridgePopMenuContentType contentType = 2;
+    // // 分享标题
+    // string title = 3;
+    // // 分享内容，保存图片内容，复制的内容, 音频地址, 视频地址
+    // string content = 4;
+    // // 分享小图片
+    // string thumb = 5;
+    // // 分享的链接
+    // string link = 6;
+    // // 分享的小程序path
+    // string miniAppPath = 7;
+    // // 分享的小程序withShareTicket
+    // bool miniAppTicket = 8;
+    // // 分享的小程序版本 0:replease 1:test 2:preview
+    // string miniAppType = 9;
         window.onload = async () => {
             document.querySelector('.btn').addEventListener('click', () => {
                 console.log(window.command)
-                window.command.popSocialMenu(JSON.stringify({
-                    type: 0,
-                    contentType: 0,
-                    title: "外链分享",
-                    content: "分享测试",
-                    thumb: '#',
-                    link: window.location.href,
-                }))
+                // 分享方式
+                let params = [
+                    {
+                        type: 0,
+                        contentType: 0,
+                        title: "外链分享",
+                        content: "分享测试",
+                        thumb: '#',
+                        link: window.location.href,
+                    },
+                    {
+                        type: 1,
+                        contentType: 0,
+                        title: "外链分享",
+                        content: "分享测试",
+                        thumb: '#',
+                        link: window.location.href,
+                    },
+                    {
+                        type: 2,
+                        contentType: 0,
+                        title: "外链分享",
+                        content: "分享测试",
+                        thumb: '#',
+                        link: window.location.href,
+                    }
+                ]
+                window.command.popSocialMenu(JSON.stringify())
             })
         }
     </script>
