@@ -217,19 +217,10 @@ function popSocialMenu(data) {
 //     }
 // ))
 
-function setShareStatus(data) {
-    return appBridge('setShareStatus', data)
-}
-
-// setShareStatus(JSON.stringify({
-//     isShow: true
-// }))
-  
 (function (window) {
     //DES 解密
     const command = {
-        popSocialMenu,
-        setShareStatus
+        popSocialMenu
     }
-    window.command = command
+    window.$appCommand = command
 }(this))
