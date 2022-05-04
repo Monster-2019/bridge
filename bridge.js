@@ -222,5 +222,5 @@ function popSocialMenu(data) {
     const command = {
         popSocialMenu
     }
-    window.$appCommand = command
+    window.command = command
 }(this))

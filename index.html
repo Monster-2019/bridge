@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/gh/Monster-2019/bridge/bridge.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            height: 48px;
+            background-color: blue;
+        }
+        .btn {
+            padding: 8px 16px;
+            background: pink;
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <button class="btn">分享测试</button>
+    <script>
+        window.onload = async () => {
+            document.querySelector('.btn').addEventListener('click', () => {
+                console.log(window.command)
+                window.command.popSocialMenu(JSON.stringify({
+                    type: 0,
+                    contentType: 0,
+                    title: "外链分享",
+                    content: "分享测试",
+                    thumb: '#',
+                    link: window.location.href,
+                }))
+            })
+        }
+    </script>
+</body>
+</html>
